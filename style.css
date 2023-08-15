@@ -1,0 +1,181 @@
+/* Global Styles */
+.bg-skin {
+  background-color: #dddad4; /* Light beige color */
+}
+
+.money {
+  font-size: 0.7rem; /* Smaller font size for money text */
+}
+
+.logo {
+  width: 40px; /* Adjust the logo width as needed */
+  position: absolute;
+  top: 5%; /* Adjust the top position as needed */
+  right: 2%; /* Adjust the right position as needed */
+  border-radius: 50%; /* Rounded border for circular shape */
+}
+
+.navbar-logo {
+  width: 18%; /* Adjust the logo width as needed */
+}
+
+.navbar-button {
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition on hover */
+}
+
+.navbar-button:hover {
+  background-color: #f3f4f6; /* Light gray background on hover */
+  color: #0d6efd; /* Blue text color on hover */
+  border-color: #0d6efd; /* Blue border color on hover */
+  border-radius: 20%; /* Rounded border on hover */
+}
+
+.navbar-text {
+  font-size: 1.2rem; /* Larger font size for navbar text */
+  margin-left: 5%; /* Adjust as needed for spacing */
+}
+
+.search-bar {
+  margin-top: 17%; /* Adjust the top margin as needed */
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Full width */
+}
+
+.navbar-collapse {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition on hover */
+}
+
+.navbar-collapse:hover {
+  background-color: #f3f4f6; /* Light gray background on hover */
+  color: #0d6efd; /* Blue text color on hover */
+  border-color: #0d6efd; /* Blue border color on hover */
+  border-radius: 20%; /* Rounded border on hover */
+}
+
+/* Flex container styles */
+.flex-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically by default */
+}
+
+@media (min-width: 1000px) {
+  /* For screens wider than 1000px */
+  .card-left-side,
+  .card-right-side,
+  .card-middle {
+    background-color: white;
+    width: 15%; /* Set card width */
+  }
+
+  .card-left-side {
+    margin-left: 8%; /* Adjust margins as needed */
+    margin-right: 1%;
+  }
+
+  .card-right-side {
+    margin-left: 1%;
+    margin-right: 8%;
+  }
+
+  .card-middle {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  .flex-container {
+    flex-direction: row; /* Arrange items in a row */
+  }
+
+  .main-content {
+    margin-left: 14%; /* Adjust the margin to match the navbar's width */
+  }
+
+  .dashboard-sign {
+    margin-left: 3%; /* Adjust margin for dashboard sign (header) */
+  }
+}
+@media (max-width: 1000px) {
+  .flex-container {
+    align-items: center;
+    flex-direction: column; /* Arrange items in a row for screens wider than 768px */
+  }
+  /* For screens up to 1000px */
+  .card-left-side,
+  .card-right-side,
+  .card-middle {
+    background-color: white;
+    width: 70%; /* Set card width */
+    margin-left: 10%;
+  }
+
+  .dashboard-sign {
+    margin-left: 17%; /* Adjust margin for dashboard sign (header) */
+  }
+  .main-content {
+    margin-left: 25%; /* Adjust the margin to match the navbar's width */
+    margin-right: 8%;
+  }
+}
+
+@media (max-width: 590px) {
+  /* For screens up to 590px */
+  .card-left-side,
+  .card-right-side,
+  .card-middle {
+    background-color: white;
+    width: 80%; /* Set card width */
+    margin-left: 1%;
+  }
+  .flex-container {
+    align-items: center;
+    flex-direction: column; /* Arrange items in a row for screens wider than 768px */
+  }
+  .navbar {
+    display: none; /* Hide navbar */
+  }
+
+  .dashboard-sign {
+    margin-left: 8%; /* Adjust margin for dashboard sign (header) */
+  }
+
+  .main-content {
+    margin-left: 8%; /* Adjust the margin to match the navbar's width */
+  }
+}
+@media (max-width: 394px) {
+  /* For screens up to 394px */
+  .card-left-side,
+  .card-right-side,
+  .card-middle {
+    background-color: white;
+    width: 80%; /* Set card width */
+  }
+
+  .navbar {
+    display: none; /* Hide navbar */
+  }
+
+  .dashboard-sign {
+    margin-left: 0%; /* Adjust margin for dashboard sign (header) */
+  }
+  .main-content {
+    margin-left: 5%; /* Adjust the margin to match the navbar's width */
+    margin-right: 5%;
+  }
+}
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  width: 150px; /* Set navbar width */
+  height: 100%; /* Make sure the navbar covers the full height of the viewport */
+  overflow-y: auto; /* Add vertical scrollbar if content exceeds viewport height */
+}

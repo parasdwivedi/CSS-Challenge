@@ -46,7 +46,7 @@
   width: 100%; /* Full width */
 }
 
-.navbar-collapse {
+.collapse-button {
   margin-top: auto;
   display: flex;
   align-items: center;
@@ -54,7 +54,7 @@
   transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition on hover */
 }
 
-.navbar-collapse:hover {
+.collapse-button:hover {
   background-color: #f3f4f6; /* Light gray background on hover */
   color: #0d6efd; /* Blue text color on hover */
   border-color: #0d6efd; /* Blue border color on hover */
@@ -102,6 +102,13 @@
   .dashboard-sign {
     margin-left: 3%; /* Adjust margin for dashboard sign (header) */
   }
+  .navbar {
+    flex-direction: column;
+    position: fixed;
+    width: 150px; /* Set navbar width */
+    height: 100%; /* Make sure the navbar covers the full height of the viewport */
+    overflow-y: auto; /* Add vertical scrollbar if content exceeds viewport height */
+  }
 }
 @media (max-width: 1000px) {
   .flex-container {
@@ -119,6 +126,13 @@
 
   .dashboard-sign {
     margin-left: 17%; /* Adjust margin for dashboard sign (header) */
+  }
+  .navbar {
+    flex-direction: column;
+    position: fixed;
+    width: 150px; /* Set navbar width */
+    height: 100%; /* Make sure the navbar covers the full height of the viewport */
+    overflow-y: auto; /* Add vertical scrollbar if content exceeds viewport height */
   }
   .main-content {
     margin-left: 25%; /* Adjust the margin to match the navbar's width */
@@ -139,16 +153,46 @@
     align-items: center;
     flex-direction: column; /* Arrange items in a row for screens wider than 768px */
   }
-  .navbar {
-    display: none; /* Hide navbar */
-  }
-
   .dashboard-sign {
     margin-left: 8%; /* Adjust margin for dashboard sign (header) */
   }
 
   .main-content {
     margin-left: 8%; /* Adjust the margin to match the navbar's width */
+  }
+
+  .navbar {
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    top: auto;
+    left: 0; /* Add this line to reset the left position */
+  }
+  .search-bar {
+    display: none;
+  }
+
+  .navbar-button {
+    width: 80px;
+  }
+  .navbar-logo {
+    width: 38px; /* Adjust the logo width as needed */
+    margin-left: 25%;
+  }
+  .navbar-button:hover {
+    background-color: #f3f4f6; /* Light gray background on hover */
+    color: #0d6efd; /* Blue text color on hover */
+    border-color: #0d6efd; /* Blue border color on hover */
+    border-radius: 50%; /* Rounded border on hover */
+  }
+
+  .navbar-text {
+    display: none;
+  }
+  .collapse-button {
+    display: none;
   }
 }
 @media (max-width: 394px) {
@@ -171,11 +215,32 @@
     margin-left: 5%; /* Adjust the margin to match the navbar's width */
     margin-right: 5%;
   }
+  .navbar {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    top: auto;
+    left: 0; /* Add this line to reset the left position */
+  }
+  .search-bar {
+    display: none;
+  }
+
+  .navbar-button {
+    width: 25%;
+    display: flex;
+  }
+
+  .navbar-logo {
+    width: 18%;
+  }
+
+  .navbar-text {
+    display: none;
+  }
+  .collapse-button {
+    display: none;
+  }
 }
 /* Navbar Styles */
-.navbar {
-  position: fixed;
-  width: 150px; /* Set navbar width */
-  height: 100%; /* Make sure the navbar covers the full height of the viewport */
-  overflow-y: auto; /* Add vertical scrollbar if content exceeds viewport height */
-}

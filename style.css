@@ -3,18 +3,6 @@
   background-color: #dddad4; /* Light beige color */
 }
 
-.money {
-  font-size: 0.7rem; /* Smaller font size for money text */
-}
-
-.logo {
-  width: 40px; /* Adjust the logo width as needed */
-  position: absolute;
-  top: 5%; /* Adjust the top position as needed */
-  right: 2%; /* Adjust the right position as needed */
-  border-radius: 50%; /* Rounded border for circular shape */
-}
-
 .navbar-logo {
   width: 18%; /* Adjust the logo width as needed */
 }

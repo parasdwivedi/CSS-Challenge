@@ -12,3 +12,5 @@ $ npm i
 ## TailwindCSS
 
 We have used a mix of inline classes of TailwindCSS and our own classes in the code.
+
+## New Branch
